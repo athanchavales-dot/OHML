@@ -16,8 +16,14 @@
 
 <main class='container'>
   <div class="card">
-    <h2>Teacher Area</h2>
-    <p>Welcome to the teacher area. (Add resources or checklists here.)</p>
+    <h2>Teacher Login</h2>
+    <p>This is a soft PIN (not secure). After success, you'll be redirected to the Teacher page.</p>
+    <form id="teacher-pin-form" class="row" style="gap:8px;align-items:center">
+      <input id="pin" type="password" placeholder="Enter PIN" class="input" style="padding:10px;border:1px solid #cbd5e1;border-radius:10px">
+      <button class="btn primary" type="submit">Enter</button>
+      <span id="msg" style="color:#b91c1c"></span>
+    </form>
+    <script>window.TEACHER_PIN='2468';</script>
   </div>
 </main>
 <footer><div class="container">© Oak Hill Media Lab</div><script src="../assets/js/main.js"></script></footer>
