@@ -1,57 +1,184 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mini Film Festival – Feedback</title>
   <style>
-  :root { --bg:#ffffff; --fg:#111827; --muted:#6b7280; --brand:#111827; --accent:#2563eb; }
-  * { box-sizing: border-box; }
-  html { font-size: 16px; }
-  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--fg); margin: 0; padding: 0; }
-  header { padding: 1.25rem 1rem; border-bottom: 1px solid #e5e7eb; background: #f9fafb; }
-  header h1 { margin: 0 0 .25rem 0; font-size: 1.5rem; }
-  header p { margin: 0; color: var(--muted); }
-  main { max-width: 900px; margin: 0 auto; padding: 1.25rem; }
-  form { display: grid; gap: 1rem; }
-  .field { display: grid; gap: .5rem; }
-  .field label { font-weight: 600; }
-  .hint { color: var(--muted); font-size: .95rem; }
-  input[type="text"], input[type="file"], textarea, select {
-    width: 100%; padding: .75rem .85rem; border: 1px solid #e5e7eb; border-radius: .75rem; background: #fff;
-  }
-  textarea { min-height: 120px; resize: vertical; }
-  .options { display: grid; gap: .35rem; padding-left: .25rem; }
-  .row { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
-  .btn { padding: .75rem 1rem; border-radius: .75rem; border: 1px solid transparent; cursor: pointer; font-weight: 600; }
-  .btn.primary { background: var(--accent); color: white; }
-  .btn.secondary { background: #f3f4f6; color: var(--fg); border-color: #e5e7eb; }
-  .btn.warn { background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; }
-  .toolbar { display: flex; gap: .75rem; flex-wrap: wrap; position: sticky; top: 0; padding: .75rem 0; background: #fff; z-index: 1; }
-  .footer-note { color: var(--muted); font-size: .9rem; margin-top: .75rem; }
-  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-  input:focus, textarea:focus, select:focus, button:focus { outline: 3px solid #bfdbfe; outline-offset: 2px; }
-</style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111827;
+      --muted: #6b7280;
+      --brand: #111827;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 1.25rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    header h1 {
+      margin: 0 0 .25rem 0;
+      font-size: 1.5rem;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: .5rem;
+    }
+
+    .field label {
+      font-weight: 600;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: .75rem .85rem;
+      border: 1px solid #e5e7eb;
+      border-radius: .75rem;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .options {
+      display: grid;
+      gap: .35rem;
+      padding-left: .25rem;
+    }
+
+    .row {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      padding: .75rem 1rem;
+      border-radius: .75rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn.secondary {
+      background: #f3f4f6;
+      color: var(--fg);
+      border-color: #e5e7eb;
+    }
+
+    .btn.warn {
+      background: #fff7ed;
+      color: #9a3412;
+      border: 1px solid #fed7aa;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      padding: .75rem 0;
+      background: #fff;
+      z-index: 1;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: .75rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus,
+    button:focus {
+      outline: 3px solid #bfdbfe;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
+
 <body data-storage-key="oakhill_celebration_form">
-  
-<header class="header" style="border-bottom:1px solid #e5e7eb;background:#fff">
-  <div class="container" style="max-width:1100px;margin:0 auto;padding:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-    <strong>Oak Hill Media Lab</strong>
-    <nav style="display:flex;gap:12px;flex-wrap:wrap">
-      <a href="../../../index.html">Home</a>
-      <a href="../../../pages/lessons.html">Lessons</a>
-      <a href="../../../pages/student.html">Student</a>
-      <a href="../../../pages/teacher-login.html">Teacher</a>
-      <a href="../../../pages/admin.html">Admin</a>
-      <a href="../../../pages/uploads.html">Uploads</a>
-      <a href="../../../pages/resources.html">Resources</a>
-      <a href="../../../pages/tools.html">Tools</a>
-      <a href="../../../pages/dashboard.html">Dashboard</a>
-      <a href="../../../pages/lesson-plan.html">Lesson Plan</a>
-    </nav>
-  </div>
-</header>
+
+  <header class="header" style="border-bottom:1px solid #e5e7eb;background:#fff">
+    <div class="container"
+      style="max-width:1100px;margin:0 auto;padding:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <strong>Oak Hill Media Lab</strong>
+      <nav style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/lessons.html">Lessons</a>
+        <a href="../../pages/student.html">Student</a>
+        <a href="../../pages/teacher-login.html">Teacher</a>
+        <a href="../../pages/admin.html">Admin</a>
+        <a href="../../pages/uploads.html">Uploads</a>
+      </nav>
+    </div>
+  </header>
 
   <main role="main">
     <div class="toolbar" aria-label="Form tools">
@@ -61,40 +188,44 @@
       <button id="reset" class="btn warn" type="button">Clear</button>
       <span id="status" class="footer-note" aria-live="polite"></span>
     </div>
-    <form action="mailto:athanasios.chavales@apoakhill.org.uk?subject=OHML Form Submission" method="post" enctype="text/plain">
-      
-    <div class="field">
-      <label for="film_watched">Which film did you watch?</label>
-      
-      <input type="text" id="film_watched" name="film_watched">
-    </div>
-    <div class="field">
-      <label for="liked">What did you like about it?</label>
-      
-      <textarea id="liked" name="liked"></textarea>
-    </div>
-    <fieldset class="field">
-      <legend>Best part of the filmmaking process for you:</legend>
-      <div class="options"><label class="row"><input type="radio" name="best_part" value="Planning"> Planning</label>
-<label class="row"><input type="radio" name="best_part" value="Filming"> Filming</label>
-<label class="row"><input type="radio" name="best_part" value="Editing"> Editing</label>
-<label class="row"><input type="radio" name="best_part" value="Acting"> Acting</label>
-<label class="row"><input type="radio" name="best_part" value="Working with friends"> Working with friends</label>
-<label class="row"><input type="radio" name="best_part" value="Everything!"> Everything!</label></div>
-    </fieldset>
-    <div class="field">
-      <label for="learn_next">What would you like to learn next time?</label>
-      
-      <textarea id="learn_next" name="learn_next"></textarea>
-    </div>
-    <fieldset class="field">
-      <legend>Give the film a star rating (1–5)</legend>
-      <div class="options"><label class="row"><input type="radio" name="stars" value="1"> 1</label>
-<label class="row"><input type="radio" name="stars" value="2"> 2</label>
-<label class="row"><input type="radio" name="stars" value="3"> 3</label>
-<label class="row"><input type="radio" name="stars" value="4"> 4</label>
-<label class="row"><input type="radio" name="stars" value="5"> 5</label></div>
-    </fieldset>
+    <form action="mailto:athanasios.chavales@apoakhill.org.uk?subject=OHML Form Submission" method="post"
+      enctype="text/plain">
+
+      <div class="field">
+        <label for="film_watched">Which film did you watch?</label>
+
+        <input type="text" id="film_watched" name="film_watched">
+      </div>
+      <div class="field">
+        <label for="liked">What did you like about it?</label>
+
+        <textarea id="liked" name="liked"></textarea>
+      </div>
+      <fieldset class="field">
+        <legend>Best part of the filmmaking process for you:</legend>
+        <div class="options"><label class="row"><input type="radio" name="best_part" value="Planning"> Planning</label>
+          <label class="row"><input type="radio" name="best_part" value="Filming"> Filming</label>
+          <label class="row"><input type="radio" name="best_part" value="Editing"> Editing</label>
+          <label class="row"><input type="radio" name="best_part" value="Acting"> Acting</label>
+          <label class="row"><input type="radio" name="best_part" value="Working with friends"> Working with
+            friends</label>
+          <label class="row"><input type="radio" name="best_part" value="Everything!"> Everything!</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="learn_next">What would you like to learn next time?</label>
+
+        <textarea id="learn_next" name="learn_next"></textarea>
+      </div>
+      <fieldset class="field">
+        <legend>Give the film a star rating (1–5)</legend>
+        <div class="options"><label class="row"><input type="radio" name="stars" value="1"> 1</label>
+          <label class="row"><input type="radio" name="stars" value="2"> 2</label>
+          <label class="row"><input type="radio" name="stars" value="3"> 3</label>
+          <label class="row"><input type="radio" name="stars" value="4"> 4</label>
+          <label class="row"><input type="radio" name="stars" value="5"> 5</label>
+        </div>
+      </fieldset>
       <div class="row">
         <button class="btn primary" type="submit">Save</button>
         <p class="footer-note">Submitting saves locally to your browser so teachers can review or export.</p>
@@ -102,88 +233,89 @@
     </form>
   </main>
   <script>
-  (function(){
-    const form = document.querySelector("form");
-    const key = document.body.dataset.storageKey || "media_lab_form";
-    const status = document.getElementById("status");
-    const downloadBtn = document.getElementById("download");
-    const saveBtn = document.getElementById("save");
-    const resetBtn = document.getElementById("reset");
-    const printBtn = document.getElementById("print");
-    
-    function serialize() {
-      const data = {};
-      const fd = new FormData(form);
-      for (const [k,v] of fd.entries()) {
-        if (v instanceof File) continue;
-        if (data[k] !== undefined) {
-          if (!Array.isArray(data[k])) data[k] = [data[k]];
-          data[k].push(v);
-        } else {
-          data[k] = v;
+    (function () {
+      const form = document.querySelector("form");
+      const key = document.body.dataset.storageKey || "media_lab_form";
+      const status = document.getElementById("status");
+      const downloadBtn = document.getElementById("download");
+      const saveBtn = document.getElementById("save");
+      const resetBtn = document.getElementById("reset");
+      const printBtn = document.getElementById("print");
+
+      function serialize() {
+        const data = {};
+        const fd = new FormData(form);
+        for (const [k, v] of fd.entries()) {
+          if (v instanceof File) continue;
+          if (data[k] !== undefined) {
+            if (!Array.isArray(data[k])) data[k] = [data[k]];
+            data[k].push(v);
+          } else {
+            data[k] = v;
+          }
         }
+        data.__timestamp = new Date().toISOString();
+        return data;
       }
-      data.__timestamp = new Date().toISOString();
-      return data;
-    }
-    function populate(data) {
-      if (!data) return;
-      [...form.elements].forEach(el => {
-        if (!el.name) return;
-        if (el.type === "file") return;
-        const value = data[el.name];
-        if (value === undefined) return;
-        switch (el.type) {
-          case "checkbox":
-            if (Array.isArray(value)) el.checked = value.includes(el.value);
-            else el.checked = (value === el.value || value === true);
-            break;
-          case "radio":
-            el.checked = (el.value === value);
-            break;
-          default:
-            el.value = value;
-        }
+      function populate(data) {
+        if (!data) return;
+        [...form.elements].forEach(el => {
+          if (!el.name) return;
+          if (el.type === "file") return;
+          const value = data[el.name];
+          if (value === undefined) return;
+          switch (el.type) {
+            case "checkbox":
+              if (Array.isArray(value)) el.checked = value.includes(el.value);
+              else el.checked = (value === el.value || value === true);
+              break;
+            case "radio":
+              el.checked = (el.value === value);
+              break;
+            default:
+              el.value = value;
+          }
+        });
+      }
+      function save(d) {
+        localStorage.setItem(key, JSON.stringify(d));
+        if (status) { status.textContent = "Saved ✓"; setTimeout(() => status.textContent = "", 1500); }
+      }
+      function load() {
+        try {
+          const d = JSON.parse(localStorage.getItem(key));
+          populate(d);
+        } catch (e) { }
+      }
+      function download(data, filename = "responses.json") {
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url; a.download = filename;
+        document.body.appendChild(a); a.click(); a.remove();
+        URL.revokeObjectURL(url);
+      }
+      load();
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = serialize();
+        save(data);
+        if (status) status.textContent = "Saved ✓ (Submit is local only)";
       });
-    }
-    function save(d) {
-      localStorage.setItem(key, JSON.stringify(d));
-      if (status) { status.textContent = "Saved ✓"; setTimeout(()=> status.textContent="", 1500); }
-    }
-    function load() {
-      try {
-        const d = JSON.parse(localStorage.getItem(key));
-        populate(d);
-      } catch(e) {}
-    }
-    function download(data, filename="responses.json") {
-      const blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = filename;
-      document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
-    }
-    load();
-    form.addEventListener("submit", (e)=>{
-      e.preventDefault();
-      const data = serialize();
-      save(data);
-      if (status) status.textContent = "Saved ✓ (Submit is local only)";
-    });
-    if (saveBtn) saveBtn.addEventListener("click", (e)=>{
-      e.preventDefault(); save(serialize());
-    });
-    if (downloadBtn) downloadBtn.addEventListener("click", (e)=>{
-      e.preventDefault(); download(serialize(), (document.title || "form") + "_responses.json");
-    });
-    if (resetBtn) resetBtn.addEventListener("click", (e)=>{
-      e.preventDefault(); form.reset(); localStorage.removeItem(key); if (status) status.textContent="Cleared";
-    });
-    if (printBtn) printBtn.addEventListener("click", (e)=>{
-      e.preventDefault(); window.print();
-    });
-  })();
-</script>
+      if (saveBtn) saveBtn.addEventListener("click", (e) => {
+        e.preventDefault(); save(serialize());
+      });
+      if (downloadBtn) downloadBtn.addEventListener("click", (e) => {
+        e.preventDefault(); download(serialize(), (document.title || "form") + "_responses.json");
+      });
+      if (resetBtn) resetBtn.addEventListener("click", (e) => {
+        e.preventDefault(); form.reset(); localStorage.removeItem(key); if (status) status.textContent = "Cleared";
+      });
+      if (printBtn) printBtn.addEventListener("click", (e) => {
+        e.preventDefault(); window.print();
+      });
+    })();
+  </script>
 </body>
+
 </html>
