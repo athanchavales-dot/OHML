@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-onedrive-link]').forEach(b=>b.addEventListener('click',()=>window.open(b.dataset.onedriveLink,'_blank')));});
